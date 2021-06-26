@@ -37,6 +37,7 @@ $tweaks = @(
 	"InstallVLC",
 	"InstallAdobe",
 	"InstallBrave",
+	"InstallWindowGrid",
 	"ChangeDefaultApps",
 
 	### Windows Apps
@@ -271,6 +272,11 @@ Function InstallBrave {
  until ($selection -match "y" -or $selection -match "n" -or $selection -match "q")
 	
 }
+
+Function InstallWindowGrid {
+	Show-Choco-Menu -Title "Do you want to install WindowGrid?" -ChocoInstall "windowgrid"
+}
+
 Function Install7Zip {
 	Show-Choco-Menu -Title "Do you want to install 7-Zip?" -ChocoInstall "7zip"
 }
